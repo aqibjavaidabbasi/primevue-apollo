@@ -1,12 +1,15 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/primevue-logo.png">
-    <HelloWorld msg="Welcome to Your PrimeVue + TypeScript App"/>
-    <form @submit.prevent="greet">
-      <InputText type="text" v-model="text"/>
-      <Button type="submit" label="Submit"/>
-      <h3>{{message}}</h3>
-    </form>
+    <div class="app-container">
+      <img alt="Vue logo" src="./assets/primevue-logo.png">
+      <HelloWorld msg="Welcome to Your PrimeVue + TypeScript App"/>
+      <form @submit.prevent="greet">
+        <InputText type="text" v-model="text"/>
+        <Button type="submit" label="Submit"/>
+        <h3>{{message}}</h3>
+      </form>
+    </div>
+
     <Toast/>
   </div>
 </template>
@@ -38,9 +41,12 @@ export default class App extends Vue {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.app-container {
+  text-align: center;
 }
 
 body #app .p-button {
