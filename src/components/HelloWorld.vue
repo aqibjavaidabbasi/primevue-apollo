@@ -5,10 +5,14 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Options, Vue } from 'vue-class-component';
 
-@Component
+@Options({
+  props: {
+    msg: String
+  }
+})
 export default class HelloWorld extends Vue {
-  @Prop() private msg!: string;
+  msg!: string
 }
 </script>

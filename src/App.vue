@@ -9,27 +9,24 @@
         <h3>{{message}}</h3>
       </form>
     </div>
-
-    <Toast/>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Options, Vue } from 'vue-class-component';
 import HelloWorld from './components/HelloWorld.vue';
 
-@Component({
+@Options({
   components: {
     HelloWorld,
-  },
+  }
 })
 export default class App extends Vue {
-  public message: string = '';
-  public text: string = '';
+  public message = '';
+  public text = '';
 
   public greet() {
     if (this.text.length) {
-      this.$toast.add({ severity: 'info', summary: 'Hello ' + this.text });
       this.message = 'Hello ' + this.text;
     }
   }
