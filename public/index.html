@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>
+
     <title>primevue-typescript</title>
   </head>
   <body>
@@ -14,4 +16,7 @@
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
+  <script>
+    window.Chart = Chart;
+  </script>
 </html>

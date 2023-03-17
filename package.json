@@ -7,13 +7,23 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "chart.js": "^2.9.4",
     "core-js": "^3.6.5",
+    "css-loader": "^6.7.3",
+    "fs-extra": "^11.1.0",
+    "fs.promises": "^0.1.2",
+    "primeflex": "^3.3.0",
+    "primeicons": "4.1.0",
+    "primevue": "3.8.2",
+    "sass": "^1.59.3",
     "vue": "3.1.5",
     "vue-class-component": "^8.0.0-0",
-    "primevue": "3.8.2",
-    "primeicons": "4.1.0"
+    "vue-router": "^4.1.6"
   },
   "devDependencies": {
+    "@babel/core": "^7.21.3",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-typescript": "^7.21.0",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -22,10 +32,10 @@
     "@vue/cli-service": "~4.5.0",
     "@vue/compiler-sfc": "3.1.5",
     "@vue/eslint-config-typescript": "^5.0.2",
+    "babel-loader": "^9.1.2",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0-0",
-    "node-sass": "^4.12.0",
-    "sass-loader": "^8.0.2",
+    "sass-loader": "^13.2.0",
     "typescript": "~3.9.3"
   }
 }
