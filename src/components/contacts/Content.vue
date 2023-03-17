@@ -55,7 +55,7 @@
                             </div>
                         </div>
                         <template #footer>
-                            <Button label="Close" class="bg-light runded-lg" icon="pi pi-times" @click="dialogVisible = false" />
+                            <Button label="Close" class="bg-light rounded-lg" icon="pi pi-times" @click="dialogVisible = false" />
                             <Button label="Save" icon="pi pi-check" class="rounded-lg" @click="dialogVisible = false" />
                         </template>
                     </Dialog>
