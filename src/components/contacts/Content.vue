@@ -105,7 +105,7 @@
             ConfirmDialog
         },
         methods: {
-            getFullName(data: object) {
+            getFullName(data: any) {
                 let fullName = '';
                 // exclude any one having  value
                 if (data.firstName != '') {

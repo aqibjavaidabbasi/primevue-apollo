@@ -231,7 +231,8 @@
     // import Chart from 'primevue/chart';
     // import { Bar } from 'vue-chartjs';
     // import chart form window.Chart
-    import { Chart } from 'chart.js';
+    import { Chart, DoughnutController, ArcElement, CategoryScale ,LinearScale, BarController, BarElement } from 'chart.js';
+    Chart.register(DoughnutController, ArcElement, CategoryScale, LinearScale, BarController, BarElement);
     @Options({
         components: {
             Card,
@@ -284,8 +285,6 @@
                 const surfaceBorder = documentStyle.getPropertyValue('--surface-border');
 
                 return {
-                    maintainAspectRatio: false,
-                    aspectRatio: 0.8,
                     plugins: {
                         legend: {
                             labels: {
@@ -332,28 +331,27 @@
                     new Chart("donut-chart", {
                         type: 'doughnut',
                         data: {
-                            labels: ['Dataset1', 'Dataset2', 'Dataset3'],
+                            labels: [
+                                'Red',
+                                'Blue',
+                                'Yellow'
+                            ],
                             datasets: [{
-                                label: '# of Votes',
-                                data: [12, 19, 3],
+                                label: 'My First Dataset',
+                                data: [300, 50, 100],
                                 backgroundColor: [
-                                    'rgba(255, 99, 132, 0.2)',
-                                    'rgba(54, 162, 235, 0.2)',
-                                    'rgba(255, 206, 86, 0.2)'
+                                'rgb(255, 99, 132)',
+                                'rgb(54, 162, 235)',
+                                'rgb(255, 205, 86)'
                                 ],
-                                borderColor: [
-                                    'rgba(255, 99, 132, 1)',
-                                    'rgba(54, 162, 235, 1)',
-                                    'rgba(255, 206, 86, 1)'
-                                ],
-                                borderWidth: 1
+                                hoverOffset: 4
                             }]
                         },
                         options: {
                             plugins: {
                                 legend: {
                                     labels: {
-                                        fontColor: 'white'
+                                        color: "white"
                                     }
                                 },
                             },
